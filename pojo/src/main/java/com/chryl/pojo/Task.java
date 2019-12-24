@@ -14,7 +14,7 @@ public class Task implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private String id;
+    private Integer id;
     @Column(name = "create_time")
     private String createTime;
     @Column(name = "update_time")
@@ -32,20 +32,11 @@ public class Task implements Serializable {
     public Task() {
     }
 
-    public Task(String createTime, String updateTime, String deleteTime, String mqQueueName, String requestBody, String version) {
-        this.createTime = createTime;
-        this.updateTime = updateTime;
-        this.deleteTime = deleteTime;
-        this.mqQueueName = mqQueueName;
-        this.requestBody = requestBody;
-        this.version = version;
-    }
-
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

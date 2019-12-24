@@ -11,15 +11,15 @@ import java.util.List;
 public class Cart implements Serializable {
 
     private static final long serialVersionUID = -189545863020255128L;
-    private String id;
+    private Integer id;
     private List<OrderItem> orderItems;
 
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

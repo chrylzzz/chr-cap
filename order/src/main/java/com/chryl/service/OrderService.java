@@ -15,8 +15,10 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;
 import javax.transaction.Transactional;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 /**
  * 订单业务层:用户页面下单,生成订单,通知商品库存模块进行减库存
@@ -48,6 +50,7 @@ public class OrderService {
          */
         //1.创建订单对象,保存订单
         Order order = new Order();
+        order.setOrderPayment(new BigDecimal(Math.random() * 1000));
         orderRepo.save(order);
         //2.从购物车 去除订单项,保存在关联表
         //orderList : 从前端传递过来,只带有good_id, 和num ,不带有order_id和id

@@ -15,50 +15,50 @@ public class OrderItem implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private String id;
+    private Integer id;
 
     @Column(name = "good_id")
-    private String goodId;
+    private Integer goodId;
 
     @Column(name = "order_id")
-    private String orderId;
+    private Integer orderId;
 
     @Column(name = "num")
-    private String num;
+    private Integer num;
 
 
     public OrderItem() {
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getGoodId() {
+    public Integer getGoodId() {
         return goodId;
     }
 
-    public void setGoodId(String goodId) {
+    public void setGoodId(Integer goodId) {
         this.goodId = goodId;
     }
 
-    public String getOrderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(String orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
 
-    public String getNum() {
+    public Integer getNum() {
         return num;
     }
 
-    public void setNum(String num) {
+    public void setNum(Integer num) {
         this.num = num;
     }
 }

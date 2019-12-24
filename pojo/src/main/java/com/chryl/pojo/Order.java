@@ -2,6 +2,7 @@ package com.chryl.pojo;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * Created by Chryl on 2019/12/23.
@@ -13,28 +14,28 @@ public class Order implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id")
-    private String orderId;
+    private Integer orderId;
 
     @Column(name = "order_payment")
-    private String orderPayment;
+    private BigDecimal orderPayment;
 
     public Order() {
     }
 
 
-    public String getOrderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(String orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
 
-    public String getOrderPayment() {
+    public BigDecimal getOrderPayment() {
         return orderPayment;
     }
 
-    public void setOrderPayment(String orderPayment) {
+    public void setOrderPayment(BigDecimal orderPayment) {
         this.orderPayment = orderPayment;
     }
 }

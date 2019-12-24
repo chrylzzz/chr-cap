@@ -15,29 +15,25 @@ public class Goods implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "good_id")
-    private String goodId;
+    private Integer goodId;
+
     @Column(name = "title")
     private String title;
+
     @Column(name = "price")
     private BigDecimal price;
 
     @Column(name = "count")
-    private String count;
+    private Integer count;
 
     public Goods() {
     }
 
-    public Goods(String title, BigDecimal price, String count) {
-        this.title = title;
-        this.price = price;
-        this.count = count;
-    }
-
-    public String getGoodId() {
+    public Integer getGoodId() {
         return goodId;
     }
 
-    public void setGoodId(String goodId) {
+    public void setGoodId(Integer goodId) {
         this.goodId = goodId;
     }
 
@@ -57,11 +53,11 @@ public class Goods implements Serializable {
         this.price = price;
     }
 
-    public String getCount() {
+    public Integer getCount() {
         return count;
     }
 
-    public void setCount(String count) {
+    public void setCount(Integer count) {
         this.count = count;
     }
 }
